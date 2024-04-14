@@ -1,0 +1,1029 @@
+:root {
+  --bg-color: #041b51;
+  --card-border: #f6dc33;
+  --gray: #767676;
+  --light-gray: #f3f3f3;
+  --normal: #a8a878;
+  --fire: #f08030;
+  --water: #6890f0;
+  --grass: #78c850;
+  --electric: #f8d030;
+  --ice: #98d8d8;
+  --fighting: #c03028;
+  --poison: #a040a0;
+  --ground: #e0c068;
+  --flying: #a890f0;
+  --psychic: #f85888;
+  --bug: #a8b820;
+  --rock: #b8a038;
+  --ghost: #705898;
+  --dark: #705848;
+  --dragon: #7038f8;
+  --steel: #b8b8d0;
+  --fairy: #f0b6bc;
+  
+  --normal-dark: #646445;
+  --fire-dark: #a2551e;
+  --water-dark: #445e9b;
+  --grass-dark: #4a7a31;
+  --electric-dark: #90791b;
+  --ice-dark: #608b8b;
+  --fighting-dark: #691b17;
+  --poison-dark: #5a245a;
+  --ground-dark: #66582f;
+  --flying-dark: #675994;
+  --psychic-dark: #9c3755;
+  --bug-dark: #636c13;
+  --rock-dark: #796a26;
+  --ghost-dark: #3f3156;
+  --dark-dark: #2c221b;
+  --dragon-dark: #41218d;
+  --steel-dark: #656577;
+  --fairy-dark: #946b6f;
+  --color1: rgb(0, 231, 255);
+  --color2: rgb(255, 0, 231);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "VT323";
+}
+ul {
+  list-style-type: none;
+}
+
+.logo-pokemon{
+  display: flex;
+  justify-content: center;
+  height: 250px;
+  padding: 0;
+  margin: 0;
+text-align: center;
+}
+
+.ball-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 0;
+}
+
+.ball{
+  height: 100px;
+  padding-top: 5px;
+  margin: 0;
+}
+
+.popup-container{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #485563, #29323c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.popup{
+  width: 600px;
+  background: #a7dcfddf;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 60px;
+  color: #333;
+  visibility: hidden;
+}
+
+.open-popup{
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+.popup h2{
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+
+.popup-btn{
+  padding: 10px 60px;
+  background: #fff;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 10px;
+  transition: transform 0.2s;
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background-color: #2121e0;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+
+
+.open-popup{
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup-btn:active{
+  transform: scale(0.95);
+}
+
+
+button {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  margin: 0;
+  
+}
+
+.nav-ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  
+}
+
+.search-block{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.search-label{
+  font-size: 50px;
+}
+.search-input{
+  border-radius: 20px;
+  font-size: 50px;
+  font-family: "VT323";
+}
+
+.btn-header {
+  background-color: var(--gray);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+  transition: 0.2s;
+  font-family: "VT323";
+  font-size: 50px;
+}
+
+body {
+  background-color: var(--bg-color);
+  margin: 0;
+  font-family: "VT323";
+  color: white;
+}
+
+
+#pokedex {
+  display: grid;
+  justify-content: center;
+
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-gap: 20px;
+  perspective: 10px;
+  padding:0px 70px 0px 70px;
+}
+.container {
+  padding: 40px;
+  margin: 0 auto;
+}
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 54px;
+  padding: 0;
+  margin: 0;
+  color: cornflowerblue;
+ 
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 54px;
+ 
+}
+
+/*TODA LA MOVIDAD DEL EFECTO HOLOGRÁFICO, LA SOMBRA DEL HOVER, EL BRILLO DEL HOVER ETC*/
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+}
+.card-face.flip{
+  transform: rotateY(180deg);
+}
+
+.card-face{
+  transition: transform 0.8s ;
+  transform-style: preserve-3d;
+  
+}
+.card-title-back{
+  color: var(--gray);
+}
+.card-back {
+  background-color: rgb(255, 252, 188);
+  transform: rotateY( 180deg );
+  position: absolute;
+  height: 400px;
+  width: 286px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  padding: 0;
+  gap: 0;
+  margin: 0;
+ 
+  border-radius: 17px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 20px, 20px, 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+  border: 3px solid var(--card-border);
+  color: #222;
+  text-align: center;
+  text-transform: uppercase;
+  transition: transform 0.5s ease, box-shadow 0.2s ease;
+  will-change: transform, filter;
+  transition: none;
+  animation: holoCard 12s ease 0s 1;
+  
+  &:after, &:before {
+    transition: none;
+    animation: holoSparkle 12s ease 0s 1;
+  }
+}
+
+
+.card-back.active:before,
+.card-back:hover:before,
+.card-back.active:after,
+.card-back:hover:after {
+  animation: none;
+  transition: none;
+}
+
+
+
+.card-back:before,
+.card-back:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  opacity: .5;
+  mix-blend-mode: color-dodge;
+  transition: all .33s ease;
+}
+
+.card-back:hover {
+  box-shadow: -20px -20px 30px -25px var(--color1),
+    20px 20px 30px -25px var(--color2), -7px -7px 10px -5px var(--color1),
+    7px 7px 10px -5px var(--color2), 0 0 13px 4px rgba(255, 255, 255, 0.3),
+    0 55px 35px -20px rgba(0, 0, 0, 0.5);
+}
+
+.card-back:before {
+  background-image: url(border.png);
+  z-index: 40;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40; /* Move behind the card content */
+  pointer-events: none;
+}
+.card-back:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  mix-blend-mode: color-dodge;
+  transition: all 0.33s ease;
+}
+
+.card-back:before {
+  background-position: 50% 50%;
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    var(--color1) 25%,
+    transparent 47%,
+    transparent 53%,
+    var(--color2) 75%,
+    transparent 100%
+  );
+  opacity: 0.5;
+  filter: brightness(0.5) contrast(1);
+  z-index: 1;
+}
+
+.card-back:after {
+  opacity: 1;
+  background-image: url("https://assets.codepen.io/13471/sparkles.gif"),url(https://assets.codepen.io/13471/holo.png), 
+    linear-gradient(
+      125deg,
+      #ff008450 15%,
+      #fca40040 30%,
+      #ffff0030 40%,
+      #00ff8a20 60%,
+      #00cfff40 70%,
+      #cc4cfa50 85%
+    );
+  background-position: 50% 50%;
+  background-size: 160%;
+  background-blend-mode: overlay;
+  z-index: 2;
+  filter: brightness(1) contrast(1);
+  transition: all 0.33s ease;
+  mix-blend-mode: color-dodge;
+  opacity: 0.75;
+}
+
+
+.card-front {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 286px;
+  padding: 10px;
+  border-radius: 17px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 20px, 20px, 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255);
+  color: #222;
+  text-align: center;
+  text-transform: uppercase;
+  transition: transform 0.5s ease, box-shadow 0.2s ease;
+  will-change: transform, filter;
+  transition: none;
+  animation: holoCard 12s ease 0s 1;
+  &:before {
+    transition: none;
+    animation: holoGradient 12s ease 0s 1;
+  }
+  &:after {
+    transition: none;
+    animation: holoSparkle 12s ease 0s 1;
+  }
+}
+
+.card-front.active:before,
+.card-front:hover:before,
+.card-front.active:after,
+.card-front:hover:after {
+  animation: none;
+  transition: none;
+}
+
+
+
+.card-front:before,
+.card-front:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  opacity: .5;
+  mix-blend-mode: color-dodge;
+  transition: all .33s ease;
+}
+
+
+.card-title {
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: normal;
+  margin: 0;
+
+padding: 0
+;}
+
+.pokemon-id {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 155px;
+  font-weight: 800;
+  z-index: -1;
+}
+
+.image-border{
+  height: 160px;
+  position: absolute;
+  text-align: center;
+  width: 160px;
+  border-width: 4px;
+  padding: 0;
+  margin: 0;
+  border-style: solid;
+  border-image: linear-gradient(140deg,  orange, var(--card-border), yellow, orange, var(--card-border)) 1;
+  z-index: -2;
+}
+
+.card-image {
+  height: 180px;
+  margin: 20px;
+  padding: 0;
+  margin: 0;
+  z-index: 500;
+  
+  
+}
+
+.card-front:hover {
+  box-shadow: -20px -20px 30px -25px var(--color1),
+    20px 20px 30px -25px var(--color2), -7px -7px 10px -5px var(--color1),
+    7px 7px 10px -5px var(--color2), 0 0 13px 4px rgba(255, 255, 255, 0.3),
+    0 55px 35px -20px rgba(0, 0, 0, 0.5);
+}
+
+.card-front:before {
+  background-image: url(border.png);
+  z-index: 40;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40; /* Move behind the card content */
+  pointer-events: none;
+}
+.card-front:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  mix-blend-mode: color-dodge;
+  transition: all 0.33s ease;
+}
+.card-front:before {
+  background-position: 50% 50%;
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    var(--color1) 25%,
+    transparent 47%,
+    transparent 53%,
+    var(--color2) 75%,
+    transparent 100%
+  );
+  opacity: 0.5;
+  filter: brightness(0.5) contrast(1);
+  z-index: 1;
+}
+
+.card-front:after {
+  opacity: 1;
+  background-image: url("https://assets.codepen.io/13471/sparkles.gif"),url(https://assets.codepen.io/13471/holo.png), 
+    linear-gradient(
+      125deg,
+      #ff008450 15%,
+      #fca40040 30%,
+      #ffff0030 40%,
+      #00ff8a20 60%,
+      #00cfff40 70%,
+      #cc4cfa50 85%
+    );
+  background-position: 50% 50%;
+  background-size: 160%;
+  background-blend-mode: overlay;
+  z-index: 2;
+  filter: brightness(1) contrast(1);
+  transition: all 0.33s ease;
+  mix-blend-mode: color-dodge;
+  opacity: 0.75;
+}
+
+
+.data-block{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 0px;
+}
+
+.data{
+  padding: 0;
+  margin: 10px;
+  color: var(--light-gray);
+}
+.type {
+  border-radius: 20px;
+  padding: 0px 10px 0px 10px;
+}
+.type-block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ability-block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.ability{
+  margin: 0;
+  padding: 3px;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.ability-title{
+  padding: 0;
+  margin: 0;
+  color: var(--bg-color);
+}
+
+
+/*Parte trasera de la carta*/
+.card-title-back{
+  padding: 0;
+  margin:0;
+
+}
+.card-gif{
+  padding: 0;
+  margin: 0;
+  height: 90px;
+}
+
+.stats-wrap {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.stats-wrap p {
+  padding: 0;
+  margin-right: 8px;
+  min-width: 19px;
+}
+
+.stats-wrap p.stats {
+padding: 0;
+  text-align: right;
+  padding-right: 8px;
+  min-width: 35px;
+  border-right: 1px solid var(--gray);
+}
+
+.stats-wrap .progress {
+  padding: 0;
+  flex: 1;
+  border-radius: 4px;
+  height: 4px;
+}
+
+.stats-wrap .progress{
+  border-radius: 4px;
+}
+
+/*para cambiar el color de la barra*/
+progress::-webkit-progress-value {
+  background-color: var(--bg-color);
+}
+.stats-wrap .progress {
+  border-radius: 4px;
+}
+
+
+/*colores*/
+.normal {
+  background-color: var(--normal);
+  color: black;
+}
+
+.fire {
+  background-color: var(--fire);
+  color: black;
+}
+
+.water {
+  background-color: var(--water);
+  color: black;
+}
+
+.grass {
+  background-color: var(--grass);
+  color: black;
+}
+
+.electric {
+  background-color: var(--electric);
+  color: black;
+}
+
+.ice {
+  background-color: var(--ice);
+  color: black;
+}
+
+.fighting {
+  background-color: var(--fighting);
+  color: white;
+}
+
+.poison {
+  background-color: var(--poison);
+  color: white;
+}
+
+.ground {
+  background-color: var(--ground);
+  color: black;
+}
+
+.flying {
+  background-color: var(--flying);
+  color: black;
+}
+
+.psychic {
+  background-color: var(--psychic);
+  color: black;
+}
+
+.bug {
+  background-color: var(--bug);
+  color: black;
+}
+
+.rock {
+  background-color: var(--rock);
+  color: black;
+}
+
+.ghost {
+  background-color: var(--ghost);
+  color: white;
+}
+
+.dark {
+  background-color: var(--dark);
+  color: white;
+}
+
+.dragon {
+  background-color: var(--dragon);
+  color: white;
+}
+
+.steel {
+  background-color: var(--steel);
+  color: black;
+}
+
+.fairy {
+  background-color: var(--fairy);
+  color: black;
+}
+
+
+/*colores oscuros*/
+.normal-dark {
+  color: var(--normal-dark);
+  
+}
+
+.fire-dark {
+  color: var(--fire-dark);
+}
+
+.water-dark {
+  color: var(--water-dark);
+}
+
+.grass-dark {
+  color: var(--grass-dark);
+}
+
+.electric-dark {
+  color: var(--electric-dark);
+}
+
+.ice-dark {
+  color: var(--ice-dark);
+}
+
+.fighting-dark {
+  color: var(--fighting-dark);
+}
+
+.poison-dark {
+  color: var(--poison-dark);
+}
+
+.ground-dark {
+  color: var(--ground-dark);
+}
+
+.flying-dark {
+  color: var(--flying-dark);
+}
+
+.psychic-dark {
+  color: var(--psychic-dark);
+}
+
+.bug-dark {
+  color: var(--bug-dark);
+}
+
+.rock-dark {
+  color: var(--rock-dark);
+}
+
+.ghost-dark {
+  color: var(--ghost-dark);
+}
+
+.dark-dark {
+  color: var(--dark-dark);
+}
+
+.dragon-dark {
+  color: var(--dragon-dark);
+}
+
+.steel-dark {
+  color: var(--steel-dark);
+}
+
+.fairy-dark {
+  color: var(--fairy-dark);
+}
+
+
+/*Fondos de las tarjetas*/
+.bg-normal {
+  background: url(border-holo.png), linear-gradient(var(--normal), white);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
+}
+
+.bg-fire {
+  background: url(border-holo.png), linear-gradient(var(--fire), white);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
+}
+
+.bg-water {
+  background: url(border-yellow.png), linear-gradient(var(--water), white);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
+}
+
+.bg-grass {
+  background: url(border.png), linear-gradient(var(--grass), white);
+  color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-electric {
+  background: url(border.png), linear-gradient(var(--electric), white);
+  color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-ice {
+  background: url(border.png), linear-gradient(var(--ice), white);
+  color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-fighting {
+  background: url(border.png), linear-gradient(var(--fighting), white);
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-poison {
+  background: url(border.png), linear-gradient(var(--poison), white);
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-ground {
+  background: url(border.png), linear-gradient(var(--ground), white);
+  color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-flying {
+  background: url(border.png), linear-gradient(var(--flying), white);
+  color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-psychic {
+  background: url(border-holo.png), linear-gradient(var(--psychic), white);
+  color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-bug {
+  background: url(border.png), linear-gradient(var(--bug), white);
+  color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-rock {
+  background: url(border-holo.png), linear-gradient(var(--rock), white);
+  color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-ghost {
+  background: url(border-yellow.png), linear-gradient(var(--ghost), white);
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-dark {
+  background: url(border-yellow.png), linear-gradient(var(--dark), white);
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-dragon {
+  background: url(border.png), linear-gradient(var(--dragon), white);
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-steel {
+  background: url(border-yellow.png), linear-gradient(var(--steel), white);
+  color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-fairy {
+  background: url(border-yellow.png), linear-gradient(var(--fairy), white);
+  color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@keyframes card {
+  from {
+    transform: translateY(100%);
+    opacity: 0.1;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes holoSparkle {
+  0%,
+  100% {
+    opacity: 0.75;
+    background-position: 50% 50%;
+    filter: brightness(1.2) contrast(1.25);
+  }
+  5%,
+  8% {
+    opacity: 1;
+    background-position: 40% 40%;
+    filter: brightness(0.8) contrast(1.2);
+  }
+  13%,
+  16% {
+    opacity: 0.5;
+    background-position: 50% 50%;
+    filter: brightness(1.2) contrast(0.8);
+  }
+  35%,
+  38% {
+    opacity: 1;
+    background-position: 60% 60%;
+    filter: brightness(1) contrast(1);
+  }
+  55% {
+    opacity: 0.33;
+    background-position: 45% 45%;
+    filter: brightness(1.2) contrast(1.25);
+  }
+}
+
+@keyframes holoGradient {
+  0%,
+  100% {
+    opacity: 0.5;
+    background-position: 50% 50%;
+    filter: brightness(0.5) contrast(1);
+  }
+  5%,
+  9% {
+    background-position: 100% 100%;
+    opacity: 1;
+    filter: brightness(0.75) contrast(1.25);
+  }
+  13%,
+  17% {
+    background-position: 0% 0%;
+    opacity: 0.88;
+  }
+  35%,
+  39% {
+    background-position: 100% 100%;
+    opacity: 1;
+    filter: brightness(0.5) contrast(1);
+  }
+  55% {
+    background-position: 0% 0%;
+    opacity: 1;
+    filter: brightness(0.75) contrast(1.25);
+  }
+}
+

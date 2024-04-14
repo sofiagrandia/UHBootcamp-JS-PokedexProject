@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="pokedex.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav">
+        <img
+          src="./logo-retro-yellow.png"
+          alt="Logo Pokemon"
+          class="logo-pokemon"
+        />
+        <h1>1st generation</h1>
+        <ul class="nav-ul">
+          <li class="nav-item">
+            <button class="btn-header" id="all">All</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-header normal" id="normal">Normal</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-header fire" id="fire">Fire</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-header water" id="water">Water</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-header grass" id="grass">Grass</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-header electric" id="electric">Electric</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-header ice" id="ice">Ice</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-header fighting" id="fighting">Fighting</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-header poison" id="poison">Poison</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-header ground" id="ground">Ground</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-header flying" id="flying">Flying</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-header psychic" id="psychic">Psychic</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-header bug" id="bug">Bug</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-header rock" id="rock">Rock</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-header ghost" id="ghost">Ghost</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-header dark" id="dark">Dark</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-header dragon" id="dragon">Dragon</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-header steel" id="steel">Steel</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-header fairy" id="fairy">Fairy</button>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="search-block">
+        <label for="search" class="search-label">Search Pokemon</label>
+        <input type="text" id="search" class="search-input" />
+      </div>
+      <div class="ball-div">
+        <img src="./pokemon-ball.gif" alt="Pokemon ball" class="ball" />
+      </div>
+      <h2>Click a card to see the stats</h2>
+
+        <div class="popup open-popup" id="popup">
+          <img src="popup.gif" alt="Ash and Pokemons" />
+          <h2>Welcome!</h2>
+          <p>To filter by type, click on the type buttons.</p>
+          <p>To search a specific Pokemon, use the search bar.</p>
+          <p>To see the stats of the Pokemon, click the card to flip it over!</p>
+          <p>Enjoy!</p>
+          <button type="button" class = "popup-btn" onclick="closePopup()">CLOSE</button>
+        </div>
+    </header>
+
+    <main id="pokedex">
+      
+      <div class="container">
+        <ol id="pokedex"></ol>
+      </div>
+    </main>
+    <div class="ball-div">
+      <img src="./pokemon-ball.gif" alt="Pokemon ball" class="ball" />
+    </div>
+  </body>
+</html>
