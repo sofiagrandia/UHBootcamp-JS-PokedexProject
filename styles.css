@@ -828,126 +828,126 @@ progress::-webkit-progress-value {
 
 /*Fondos de las tarjetas*/
 .bg-normal {
-  background: url(border-holo.png), linear-gradient(var(--normal), white);
+  background: url(media/border-holo.png), linear-gradient(var(--normal), white);
   background-size: cover;
   background-repeat: no-repeat;
   color: black;
 }
 
 .bg-fire {
-  background: url(border-holo.png), linear-gradient(var(--fire), white);
+  background: url(media/border-holo.png), linear-gradient(var(--fire), white);
   background-size: cover;
   background-repeat: no-repeat;
   color: black;
 }
 
 .bg-water {
-  background: url(border-yellow.png), linear-gradient(var(--water), white);
+  background: url(media/border-yellow.png), linear-gradient(var(--water), white);
   background-size: cover;
   background-repeat: no-repeat;
   color: black;
 }
 
 .bg-grass {
-  background: url(border.png), linear-gradient(var(--grass), white);
+  background: url(media/border.png), linear-gradient(var(--grass), white);
   color: black;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .bg-electric {
-  background: url(border.png), linear-gradient(var(--electric), white);
+  background: url(media/border.png), linear-gradient(var(--electric), white);
   color: black;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .bg-ice {
-  background: url(border.png), linear-gradient(var(--ice), white);
+  background: url(media/border.png), linear-gradient(var(--ice), white);
   color: black;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .bg-fighting {
-  background: url(border.png), linear-gradient(var(--fighting), white);
+  background: url(media/border.png), linear-gradient(var(--fighting), white);
   color: white;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .bg-poison {
-  background: url(border.png), linear-gradient(var(--poison), white);
+  background: url(media/border.png), linear-gradient(var(--poison), white);
   color: white;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .bg-ground {
-  background: url(border.png), linear-gradient(var(--ground), white);
+  background: url(media/border.png), linear-gradient(var(--ground), white);
   color: black;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .bg-flying {
-  background: url(border.png), linear-gradient(var(--flying), white);
+  background: url(media/border.png), linear-gradient(var(--flying), white);
   color: black;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .bg-psychic {
-  background: url(border-holo.png), linear-gradient(var(--psychic), white);
+  background: url(media/border-holo.png), linear-gradient(var(--psychic), white);
   color: black;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .bg-bug {
-  background: url(border.png), linear-gradient(var(--bug), white);
+  background: url(media/border.png), linear-gradient(var(--bug), white);
   color: black;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .bg-rock {
-  background: url(border-holo.png), linear-gradient(var(--rock), white);
+  background: url(media/border-holo.png), linear-gradient(var(--rock), white);
   color: black;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .bg-ghost {
-  background: url(border-yellow.png), linear-gradient(var(--ghost), white);
+  background: url(media/border-yellow.png), linear-gradient(var(--ghost), white);
   color: white;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .bg-dark {
-  background: url(border-yellow.png), linear-gradient(var(--dark), white);
+  background: url(media/border-yellow.png), linear-gradient(var(--dark), white);
   color: white;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .bg-dragon {
-  background: url(border.png), linear-gradient(var(--dragon), white);
+  background: url(media/border.png), linear-gradient(var(--dragon), white);
   color: white;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .bg-steel {
-  background: url(border-yellow.png), linear-gradient(var(--steel), white);
+  background: url(media/border-yellow.png), linear-gradient(var(--steel), white);
   color: black;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .bg-fairy {
-  background: url(border-yellow.png), linear-gradient(var(--fairy), white);
+  background: url(media/border-yellow.png), linear-gradient(var(--fairy), white);
   color: black;
   background-size: cover;
   background-repeat: no-repeat;
